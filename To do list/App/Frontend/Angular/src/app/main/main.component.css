@@ -1,0 +1,15 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  
+}
+
+.divinter {
+  flex: 1 1 calc(33.33% - 1rem); /* 3 columnas con margen */
+  box-sizing: border-box;
+  height: max-content;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  text-align: center;
+}

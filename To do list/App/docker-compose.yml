@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./Frontend/Angular
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./Frontend/Angular:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+  backend:
+    build: ./Backend
+    ports:
+      - "3000:3000"
+    volumes:
+      -  ./Backend:/var/www/html
