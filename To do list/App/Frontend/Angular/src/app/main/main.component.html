@@ -3,18 +3,28 @@
 
 <section>
     <div class="divinter">
-     <h1>to do</h1>
+     <h1>To do</h1>
+     <div class="tareasContainer">
+        <app-tarea *ngFor="let tarea of tareasToDo"></app-tarea>
+     </div>
+         <button type="button"  (click)="agregarTarea(1)" id="button">agregar tarea</button>
     </div>
 
     <div class="divinter">
-        <h1>doing</h1>
+        <h1>Doing</h1>
+        <div class="tareasContainer">
+             <app-tarea *ngFor="let tarea of tareasDoing" ></app-tarea>
+        </div>
+            <button type="button" (click)="agregarTarea(2)" id="button">agregar tarea</button>
     </div>
         
     <div class="divinter">
-        <h1>done</h1>
+        <h1>Done</h1>
+        <div class="tareasContainer">
+             <app-tarea *ngFor="let tarea of tareasDone" ></app-tarea>
+        </div>
+            <button type="button" (click)="agregarTarea(3)" id="button">agregar tarea</button>
     </div>
 </section>
-<section>
-    <button type="button">agregar tarea</button>
-</section>
+
 
