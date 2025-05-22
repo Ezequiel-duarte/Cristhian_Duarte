@@ -5,15 +5,16 @@
     <div class="divinter">
      <h1>To do</h1>
      <div class="tareasContainer">
-        <app-tarea *ngFor="let tarea of tareasToDo"></app-tarea>
+        <app-tarea></app-tarea>
      </div>
-         <button type="button"  (click)="agregarTarea(1)" id="button">agregar tarea</button>
+        <button (click)="abrirModal()">Agregar tarea</button>
+
     </div>
 
     <div class="divinter">
         <h1>Doing</h1>
         <div class="tareasContainer">
-             <app-tarea *ngFor="let tarea of tareasDoing" ></app-tarea>
+             <app-tarea></app-tarea>
         </div>
             <button type="button" (click)="agregarTarea(2)" id="button">agregar tarea</button>
     </div>
@@ -21,10 +22,11 @@
     <div class="divinter">
         <h1>Done</h1>
         <div class="tareasContainer">
-             <app-tarea *ngFor="let tarea of tareasDone" ></app-tarea>
+             <app-tarea></app-tarea>
         </div>
             <button type="button" (click)="agregarTarea(3)" id="button">agregar tarea</button>
     </div>
 </section>
+<app-crear-tarea *ngIf="mostrarModal"></app-crear-tarea>
 
 
